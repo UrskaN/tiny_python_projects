@@ -7,11 +7,11 @@ from subprocess import getstatusoutput, getoutput
 prg = './crowsnest.py'
 consonant_words = [
     'brigantine', 'clipper', 'dreadnought', 'frigate', 'galleon', 'haddock',
-    'junk', 'ketch', 'longboat', 'mullet', 'narwhal', 'porpoise', 'quay',
+    'junk', 'ketch', 'Longboat', 'mullet', 'Narwhal', 'porpoise', 'quay',
     'regatta', 'submarine', 'tanker', 'vessel', 'whale', 'xebec', 'yatch',
     'zebrafish'
 ]
-vowel_words = ['aviso', 'eel', 'iceberg', 'octopus', 'upbound']
+vowel_words = ['aviso', 'Eel', 'iceberg', 'Octopus', 'upbound']
 template = 'Ahoy, Captain, {} {} off the larboard bow!'
 
 
