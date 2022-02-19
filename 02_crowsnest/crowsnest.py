@@ -16,6 +16,12 @@ def get_args():
 
     parser.add_argument('word',
                         help='A word')
+    parser.add_argument('-s',
+                        '--side',
+                        help='Side of ship',
+                        metavar='side',
+                        type=str,
+                        default='larboard')
 
     return parser.parse_args()
 
@@ -26,10 +32,17 @@ def main():
 
     args = get_args()
     word = args.word
+    side = args.side
+
+    if not word.isalpha():
+        print('Enter a valid word.')
+        return
+
     article = 'an' if word[0].lower() in 'aeiou' else 'a'
+    article = article.title() if word[0].isupper() else article
 
 
-    print(f'Ahoy, Captain, {article} {word} off the larboard bow!')
+    print(f'Ahoy, Captain, {article} {word} off the {side} bow!')
 
 
 # --------------------------------------------------
